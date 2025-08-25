@@ -1,0 +1,255 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #b71c1c;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #f8d7da;
+}
+
+.sidebar nav ul li.active a {
+    background-color: #b71c1c;
+    color: white;
+}
+
+/* Conteúdo */
+.conteudo {
+    flex: 1;
+    padding: 40px 50px; /* aumentei espaçamento do menu pro grid */
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-size: 2em; /* maior */
+    color: black; /* preto */
+}
+
+.data-hora {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Abas */
+.abas {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.aba {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.aba.ativa {
+    border-bottom: 3px solid #b71c1c;
+    font-weight: bold;
+    color: #b71c1c;
+}
+
+/* Resumo */
+.resumo {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-weight: bold;
+    color: #b71c1c;
+}
+
+/* Lista de pedidos */
+.lista-pedidos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pedido {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    background: white;
+}
+
+.pedido h3 {
+    margin-top: 0;
+    color: black; /* preto */
+    font-size: 1.2em; /* maior destaque */
+}
+
+.pedido ul {
+    padding-left: 20px;
+    color: #777; /* cinza mais claro nos detalhes */
+}
+
+.pedido p {
+    color: #777; /* código do pedido mais claro */
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Botões */
+.btn-entregar {
+    background-color: #e60000;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-detalhes {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-entregar:hover {
+    background-color: #8a1212;
+}
+
+.btn-detalhes:hover {
+    background-color: #f8d7da;
+}
+
+/* Label de acesso */
+.acesso-info {
+    margin-top: 15px;
+    font-size: 0.85em;
+    color: #555;
+    text-align: center;
+}
+
+/* Rodapé vermelho */
+/* Rodapé fixo estilo barra do Windows */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e60000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.85em;
+    z-index: 1000;
+}
+/* Estilos para os gráficos */
+        .graficos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .grafico-container {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grafico-container h3 {
+            margin-bottom: 10px;
+            color: #b71c1c;
+            text-align: center;
+        }
+
+        .grafico-container canvas {
+            flex: 1;
+        }
+
+        .btn-relatorio {
+            background-color: #e60000;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+        .btn-busca {
+            background-color: #e60000;
+            color: white;
+            border: none;
+            padding: 7px 7px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-relatorio:hover {
+            background-color: #8a1212;
+        }

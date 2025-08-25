@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Cantina Fácil</title>
+    <link rel="stylesheet" href="pedidos.css">
+    <script>
+        // Exibe data/hora de acesso da máquina
+        document.addEventListener("DOMContentLoaded", () => {
+            const agora = new Date();
+            const opcoes = { day: '2-digit', month: '2-digit', year: 'numeric', 
+                             hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById("acesso-info").textContent =
+                `Acesso em: ${agora.toLocaleDateString('pt-BR', opcoes)}`;
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Cantina Fácil</h2>
+        <nav>
+            <ul>
+                <li class="active"><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="relatorio.html">Relatório de Vendas</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="conteudo">
+        
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1>Pedidos</h1>
+            <span id="acesso-info" class="acesso-info"> </span>
+        </header>
+
+        <!-- Abas -->
+        <nav class="abas">
+            <button class="aba ativa">Pedidos em Andamento</button>
+            <button class="aba">Pedidos Entregues</button>
+        </nav>
+
+        <!-- Resumo Financeiro -->
+        <section class="resumo">
+            <strong>Total do dia: R$ 536,49</strong>
+        </section>
+
+        <!-- Lista de Pedidos (grid) -->
+        <section class="lista-pedidos">
+            <!-- Pedido (exemplo) -->
+            <article class="pedido">
+                <h3>Cliente: Luana Helena</h3>
+                <ul>
+                    <li>1x Coca-Cola 250ml</li>
+                    <li>1x Coxinha</li>
+                </ul>
+                <p><strong>Código:</strong> 20250434</p>
+                <div class="acoes">
+                    <button class="btn-entregar">Entregar</button>
+                    <button class="btn-detalhes">Ver detalhes</button>
+                </div>
+            </article>
+
+            <!-- Mais pedidos -->
+            <article class="pedido">
+                <h3>Cliente: Luana Helena</h3>
+                <ul>
+                    <li>1x Coca-Cola 250ml</li>
+                    <li>1x Coxinha</li>
+                </ul>
+                <p><strong>Código:</strong> 20250434</p>
+                <div class="acoes">
+                    <button class="btn-entregar">Entregar</button>
+                    <button class="btn-detalhes">Ver detalhes</button>
+                </div>
+            </article>
+
+            <article class="pedido">
+                <h3>Cliente: Luana Helena</h3>
+                <ul>
+                    <li>1x Coca-Cola 250ml</li>
+                    <li>1x Coxinha</li>
+                </ul>
+                <p><strong>Código:</strong> 20250434</p>
+                <div class="acoes">
+                    <button class="btn-entregar">Entregar</button>
+                    <button class="btn-detalhes">Ver detalhes</button>
+                </div>
+            </article>
+
+            <article class="pedido">
+                <h3>Cliente: Luana Helena</h3>
+                <ul>
+                    <li>1x Coca-Cola 250ml</li>
+                    <li>1x Coxinha</li>
+                </ul>
+                <p><strong>Código:</strong> 20250434</p>
+                <div class="acoes">
+                    <button class="btn-entregar">Entregar</button>
+                    <button class="btn-detalhes">Ver detalhes</button>
+                </div>
+            </article>
+
+            <article class="pedido">
+                <h3>Cliente: Luana Helena</h3>
+                <ul>
+                    <li>1x Coca-Cola 250ml</li>
+                    <li>1x Coxinha</li>
+                </ul>
+                <p><strong>Código:</strong> 20250434</p>
+                <div class="acoes">
+                    <button class="btn-entregar">Entregar</button>
+                    <button class="btn-detalhes">Ver detalhes</button>
+                </div>
+            </article>
+
+            
+        </section>
+
+        <!-- Label de data/hora de acesso -->
+        <div id="acesso-info" class="acesso-info"></div>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>© 2025 Cantina Fácil. Todos os direitos reservados.</p>
+        </footer>
+    </main>
+</div>
+</body>
+</html>

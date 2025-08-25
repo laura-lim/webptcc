@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Cantina Fácil</title>
+    <link rel="stylesheet" href="pedidos.css">
+    <script>
+        // Exibe data/hora de acesso da máquina
+        document.addEventListener("DOMContentLoaded", () => {
+            const agora = new Date();
+            const opcoes = { day: '2-digit', month: '2-digit', year: 'numeric', 
+                             hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById("acesso-info").textContent =
+                `Acesso em: ${agora.toLocaleDateString('pt-BR', opcoes)}`;
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Cantina Fácil</h2>
+        <nav>
+            <ul>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="relatorio.html">Relatório de Vendas</a></li>
+                <li class= "active"><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="conteudo">
+        
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1>Cardápio</h1>
+            <span id="acesso-info" class="acesso-info"> </span>
+        </header>
+
+        <!-- Abas -->
+        <nav class="abas">
+            <button class="aba ativa">Lanches</button>
+            <button class="aba">Bebidas</button>
+            <button class="aba">Doces</button>
+            <button class="aba">Salgados</button>
+        </nav>
+
+        <!-- Resumo Financeiro -->
+        <section class="resumo">
+            <button class="aba"> + Adicionar Produto</button>
+        </section>
+
+        <!-- Lista de Pedidos (grid) -->
+        <section class="lista-pedidos">
+            <!-- Pedido (exemplo) -->
+            <article class="pedido">
+                <img src= "https://alloydeliveryimages.s3.sa-east-1.amazonaws.com/item_images/7290/64ceb8f870980813qe.webp" width="200" height="200">
+                <h3>X - BACON</h3>
+                  <p><strong>Descrição:</strong> Uma explosão de sabor em cada camada! Nosso hambúrguer de 150g, cuidadosamente selado na chapa.   </p>
+                <ul>
+                    <li>R$15,90 </li>
+                </ul>
+                <p><strong>Código:</strong> 20250434 </p>
+                <div class="acoes">
+                    <button class="btn-entregar">Editar</button>
+                    <button class="btn-detalhes">Excluir</button>
+                </div>
+            </article>
+
+            <!-- Mais itens! -->
+            <article class="pedido">
+                <img src= "https://alloydeliveryimages.s3.sa-east-1.amazonaws.com/item_images/7290/64ceb8f870980813qe.webp" width="200" height="200">
+                   <h3>X - BACON</h3>
+                  <p><strong>Descrição:</strong> Uma explosão de sabor em cada camada! Nosso hambúrguer de 150g, cuidadosamente selado na chapa.   </p>
+                <ul>
+                    <li>R$15,90 </li>
+                </ul>
+                <p><strong>Código:</strong> 20250434 </p>
+                <div class="acoes">
+                    <button class="btn-entregar">Editar</button>
+                    <button class="btn-detalhes">Excluir</button>
+                </div>
+            </article>
+
+            <article class="pedido">
+                <img src= "https://alloydeliveryimages.s3.sa-east-1.amazonaws.com/item_images/7290/64ceb8f870980813qe.webp" width="200" height="200">
+                  <h3>X - BACON</h3>
+                  <p><strong>Descrição:</strong> Uma explosão de sabor em cada camada! Nosso hambúrguer de 150g, cuidadosamente selado na chapa.   </p>
+                <ul>
+                    <li>R$15,90 </li>
+                </ul>
+                <p><strong>Código:</strong> 20250434 </p>
+                <div class="acoes">
+                    <button class="btn-entregar">Editar</button>
+                    <button class="btn-detalhes">Excluir</button>
+                </div>
+            </article>
+           
+
+            <article class="pedido">
+                <img src= "https://alloydeliveryimages.s3.sa-east-1.amazonaws.com/item_images/7290/64ceb8f870980813qe.webp" width="200" height="200">
+                   <h3>X - BACON</h3>
+                  <p><strong>Descrição:</strong> Uma explosão de sabor em cada camada! Nosso hambúrguer de 150g, cuidadosamente selado na chapa.   </p>
+                <ul>
+                    <li>R$15,90 </li>
+                </ul>
+                <p><strong>Código:</strong> 20250434 </p>
+                <div class="acoes">
+                    <button class="btn-entregar">Editar</button>
+                    <button class="btn-detalhes">Excluir</button>
+                </div>
+            </article>
+
+            <article class="pedido">
+                <img src= "https://alloydeliveryimages.s3.sa-east-1.amazonaws.com/item_images/7290/64ceb8f870980813qe.webp" width="200" height="200">
+                   <h3>X - BACON</h3>
+                  <p><strong>Descrição:</strong> Uma explosão de sabor em cada camada! Nosso hambúrguer de 150g, cuidadosamente selado na chapa.   </p>
+                <ul>
+                    <li>R$15,90 </li>
+                </ul>
+                <p><strong>Código:</strong> 20250434 </p>
+                <div class="acoes">
+                    <button class="btn-entregar">Editar</button>
+                    <button class="btn-detalhes">Excluir</button>
+                </div>
+            </article>
+            
+        </section>
+
+        <!-- Label de data/hora de acesso -->
+        <div id="acesso-info" class="acesso-info"></div>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>© 2025 Cantina Fácil. Todos os direitos reservados.</p>
+        </footer>
+    </main>
+</div>
+</body>
+</html>
+
